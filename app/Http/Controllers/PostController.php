@@ -49,7 +49,9 @@ class PostController extends Controller
             }
 
 
-            return Response()->json(['status' => 'success', 'subscribers' => $subscribers]);
+            return Response()->json(['status' => 'success']);
+        } else {
+            return Response()->json(['status' => 'fail']);
         }
     }
 
